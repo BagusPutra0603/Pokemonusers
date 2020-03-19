@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lineardata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bluePrimary"
+        android:padding="30dp"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/searchimage"
+            android:id="@+id/searchimage"
+
+            />
+
+        <EditText
+            android:layout_toRightOf="@+id/searchimage"
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/bordersearch"
+            android:hint="Search Github users"
+            android:textColorHint="@color/silverPrimary"
+
+
+            />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lineardata"
+        android:backgroundTint="#f2f2f2"
+        tools:context=".controller.MainActivity"
+        tools:showIn="@layout/activity_main" />
+
+
+</RelativeLayout>
